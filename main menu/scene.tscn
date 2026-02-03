@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://qf7ff5hbah7m"]
+
+[ext_resource type="Script" uid="uid://cstkkenv1551p" path="res://components/generals/btn_next_room.gd" id="1_jr07r"]
+[ext_resource type="PackedScene" uid="uid://diq7bt3ad7on6" path="res://encounter/scene.tscn" id="2_nyf5w"]
+
+[node name="MainMenu" type="Node2D" unique_id=335709907]
+
+[node name="UI" type="Control" parent="." unique_id=1259972072]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Button" type="Button" parent="UI" unique_id=857344174]
+layout_mode = 0
+offset_left = 344.0
+offset_top = 515.0
+offset_right = 778.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 48
+text = "Start"
+script = ExtResource("1_jr07r")
+next_room = ExtResource("2_nyf5w")
