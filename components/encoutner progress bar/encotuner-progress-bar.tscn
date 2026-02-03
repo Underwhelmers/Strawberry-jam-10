@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://ndvb52gx713q"]
+
+[ext_resource type="Script" uid="uid://c5yawyncngml5" path="res://components/encoutner progress bar/encotuner-progress-bar.gd" id="1_887et"]
+
+[node name="EncotunerProgressBar" type="Control" unique_id=388422809]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -832.0
+offset_bottom = -616.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_887et")
+
+[node name="Background" type="ColorRect" parent="." unique_id=464331243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Background" type="ColorRect" parent="Background" unique_id=1335719274]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.5236299, 0.04007931, 0.32620013, 1)
+
+[node name="Fill" type="ColorRect" parent="." unique_id=499817352]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.803812, 0.2504931, 0.59901214, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Fill" unique_id=2046409327]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Separator" type="ColorRect" parent="." unique_id=551074792]
+visible = false
+layout_mode = 0
+offset_top = -8.0
+offset_right = 3.0
+offset_bottom = 32.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.6117647)
+
+[node name="ColorRect2" type="ColorRect" parent="Separator" unique_id=2113627461]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 30.000008
+offset_right = 32.0
+offset_bottom = 60.000008
+rotation = -2.3561945
+mouse_filter = 2
+color = Color(0.043039158, 0.04303915, 0.04303915, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Separator/ColorRect2" unique_id=1975310853]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 27.0
+offset_bottom = 27.0
+mouse_filter = 2
