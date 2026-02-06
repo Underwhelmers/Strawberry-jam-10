@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bnqdeil7120hd" path="res://encounter/backgorund.png" id="1_eah6o"]
 [ext_resource type="PackedScene" uid="uid://ndvb52gx713q" path="res://components/encoutner progress bar/encotuner-progress-bar.tscn" id="2_ksll5"]
 [ext_resource type="Script" uid="uid://bkvhrakg6v6oq" path="res://encounter/input-handler.gd" id="3_ycpl7"]
+[ext_resource type="Script" uid="uid://cjqqgyvekrmvg" path="res://encounter/combo-caster.gd" id="4_tgjud"]
 
 [node name="Encounter" type="Node2D" unique_id=762824896]
 
@@ -18,14 +19,20 @@ offset_right = 1152.0
 offset_bottom = 648.0
 
 [node name="ActionBar" parent="UI" unique_id=388422809 instance=ExtResource("2_ksll5")]
+visible = false
 layout_mode = 1
 offset_left = 69.0
 offset_top = 571.0
 offset_right = -60.0
 offset_bottom = -45.0
-max_value = 25.0
+max_value = 2.0
 threshold_count = 4
 smooth_speed = 15.0
+start_buffer = 0.0
+end_buffer = 0.0
 
 [node name="InputHandler" type="Node" parent="." unique_id=795093963]
 script = ExtResource("3_ycpl7")
+
+[node name="ComboCaster" type="Node" parent="." unique_id=1201945299]
+script = ExtResource("4_tgjud")

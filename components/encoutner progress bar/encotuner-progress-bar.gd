@@ -8,6 +8,8 @@ signal finished_charging()
 @export var max_value: float = 100.0
 @export var threshold_count: int = 3
 @export var smooth_speed: float = 8.0
+@export var start_buffer: float = 0.5
+@export var end_buffer: float = 0.5
 
 @onready var fill := $Fill
 var _fill_xsize : float
@@ -55,15 +57,21 @@ func _update_fill():
 	fill.size.x = _fill_xsize * ratio + 0.375
 
 func _place_all_separators():
-	var step = _fill_xsize / threshold_count
+	var step = calc_pos_step(_fill_xsize)
 	for i in threshold_count:
 		var sep := separator.duplicate()
 		add_child(sep)
 		sep.visible = true
-		sep.position.x = fill.position.x + step * (i + 0.5)
+		sep.position.x = fill.position.x + calc_pos_offset(step, i)
 
 func _place_all_triggers():
-	var step := max_value / threshold_count
+	var step = calc_pos_step(max_value)
 	_triggers.resize(threshold_count)
 	for i in threshold_count:
-		_triggers[i] = step * (i + 0.5)
+		_triggers[i] = calc_pos_offset(step,i)
+
+func calc_pos_step(width):
+	return width / (threshold_count-1 + start_buffer + end_buffer)
+
+func calc_pos_offset(step, i):
+	return step * (i + start_buffer)
