@@ -36,8 +36,8 @@ func start_combo():
 	action_bar.visible = true
 
 func cast_combo():
+	print("Combo: ", current_combo)
 	combo_casted.emit(current_combo)
 	comboing = false
 	action_bar.visible = false
 	action_bar.set_value(0.0)
-	print_debug("Combo: ", current_combo)
